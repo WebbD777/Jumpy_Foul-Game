@@ -13,6 +13,8 @@ public class PLayer : MonoBehaviour
         plyBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
+
+        
     }
    
     // Start is called before the first frame update
@@ -57,6 +59,8 @@ public class PLayer : MonoBehaviour
 
         if (col.gameObject.CompareTag("Enemy")){
             Destroy(gameObject);
+
+            Time.timeScale = 0f; //Pauses the game
         }
     }
 }
